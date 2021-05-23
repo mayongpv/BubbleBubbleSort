@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BubbleSort : MonoBehaviour
 {
+    private int temp;
+
     //할일 적기
     /*수를 나열한다.
      * -> 리스트 사용
@@ -22,23 +24,37 @@ public class BubbleSort : MonoBehaviour
 
         List<int> bubblesort = new List<int>()
         { 3, 5, 10, -2, 24};
-        
+
         //2. 왼쪽부터 수를 두개씩 비교한다.
         //큰 수를 오른쪽으로 보낸다. -> 왼쪽 수가 오른쪽 보다 크면 위치를 바꾼다.
-        if (bubblesort[0] > bubblesort[1])
+        //->
+
+        //바꾼다? 즉, 오른쪽에 있는 수를 왼쪽에 넣고 왼쪽에 있는 수를 오른쪽으로 넣는다?
+
+
+        //다른 코드
+
+        for (int i = 0; i < bubblesort.Count; i++)
         {
-            //바꾼다? 즉, 오른쪽에 있는 수를 왼쪽에 넣고 왼쪽에 있는 수를 오른쪽으로 넣는다?
-            System.Console.WriteLine(bubblesort[0] = bubblesort[1]);
-            System.Console.WriteLine(bubblesort[1] = bubblesort[0]);
-            Debug.Log(bubblesort[0] = bubblesort[1]);
-            Debug.Log(bubblesort[1] = bubblesort[0]);
+            for (int j = 0; j < bubblesort.Count; j++)
+            {
+                if (bubblesort[i] < bubblesort[j])
+                {
+                    temp = bubblesort[i];
+                    bubblesort[i] = bubblesort[j];
+                    bubblesort[j] = temp;
+                }
+            }
+        
 
         }
+        for (int )
     }
-
-
-
 }
+
+
+
+
 
 
 
